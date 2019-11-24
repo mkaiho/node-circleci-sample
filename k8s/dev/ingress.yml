@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: node-circleci-sample
+spec:
+  rules:
+  - host: node-circleci-sample.dev.mkaiho
+    http:
+      paths:
+      - backend:
+          serviceName: node-circleci-sample
+          servicePort: 3000
